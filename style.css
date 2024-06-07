@@ -1,0 +1,93 @@
+/* Basisstijl */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+    width: 100%;
+}
+
+header img.banner {
+    width: 100%;
+    max-height: 200px;
+    object-fit: cover;
+}
+
+header h1 {
+    margin: 0;
+}
+
+nav {
+    background-color: #666;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+}
+
+nav a {
+    display: inline-block;
+    color: #fff;
+    padding: 10px;
+    text-decoration: none;
+}
+
+nav a:hover {
+    background-color: #333;
+}
+
+main {
+    padding: 20px;
+    flex: 1;
+}
+
+h2 {
+    text-align: center;
+}
+
+.info, .links, .image, .extra-logo {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.icon {
+    width: 20px;
+    height: 20px;
+    vertical-align: middle;
+    margin-left: 5px;
+}
+
+.pen-image {
+    width: 50%; /* Breedte aanpassen om overeen te komen met de tekst */
+    max-width: 500px; /* Maximale breedte instellen */
+    height: auto;
+}
+
+.rd-logo {
+    width: 150px;
+    height: auto;
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #333;
+    color: #fff;
+    width: 100%;
+}
+
+/* Responsieve stijl */
+@media (max-width: 768px) {
+    footer {
+        position: static;
+        padding: 20px;
+    }
+}
