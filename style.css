@@ -16,64 +16,68 @@ header {
     width: 100%;
 }
 
-header img.banner {
-    width: 100%;
-    max-height: 200px;
-    object-fit: cover;
-}
-
 header h1 {
     margin: 0;
 }
 
 nav {
     background-color: #666;
-    color: #fff;
     padding: 10px;
-    text-align: center;
 }
 
 nav a {
-    display: inline-block;
     color: #fff;
-    padding: 10px;
+    margin: 0 10px;
     text-decoration: none;
 }
 
 nav a:hover {
-    background-color: #333;
+    text-decoration: underline;
 }
 
 main {
-    padding: 20px;
     flex: 1;
+    padding: 20px;
 }
 
-h2 {
+h2, h3 {
     text-align: center;
 }
 
-.info, .links, .image, .extra-logo {
+.photo-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+
+.photo-grid a {
+    width: calc(25% - 20px); /* Vier foto's per rij op pc */
+    height: auto;
+    text-decoration: none;
+}
+
+.photo-grid img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+}
+
+.photo-grid a:hover .description {
+    display: block;
+}
+
+.description {
+    display: none;
     text-align: center;
-    margin-bottom: 20px;
+    font-size: 14px; /* Aanpassing: grotere lettergrootte */
+    margin-top: 5px;
 }
 
-.icon {
-    width: 20px;
-    height: 20px;
-    vertical-align: middle;
-    margin-left: 5px;
-}
-
-.pen-image {
-    width: 50%; /* Breedte aanpassen om overeen te komen met de tekst */
-    max-width: 500px; /* Maximale breedte instellen */
-    height: auto;
-}
-
-.rd-logo {
-    width: 150px;
-    height: auto;
+.blurry {
+    filter: blur(2px);
 }
 
 footer {
@@ -85,9 +89,93 @@ footer {
 }
 
 /* Responsieve stijl */
-@media (max-width: 768px) {
-    footer {
-        position: static;
-        padding: 20px;
+@media (max-width: 1200px) {
+    .photo-grid a {
+        width: calc(33.33% - 20px); /* Drie foto's per rij op pc */
     }
+}
+
+@media (max-width: 768px) {
+    .photo-grid a {
+        width: calc(50% - 20px); /* Twee foto's per rij op telefoon */
+    }
+}
+
+@media (max-width: 480px) {
+    .photo-grid a {
+        width: calc(100% - 20px); /* Een foto per rij op kleine schermen */
+    }
+}
+
+/* Lightbox */
+.lightbox {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 60px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.9);
+}
+
+.lightbox-content {
+    margin: auto;
+    display: block;
+    max-width: 90%; /* Aanpassing: beperk de maximale breedte van de afbeeldingen in de lightbox */
+    max-height: 90%; /* Aanpassing: beperk de maximale hoogte van de afbeeldingen in de lightbox */
+}
+
+.close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #fff;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
+}
+
+#caption {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    text-align: center;
+    color: #ccc;
+    padding: 10px 0;
+    height: 150px;
 }
