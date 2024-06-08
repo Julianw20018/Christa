@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Christa's Bingo Foto's</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="lightbox.css">
 </head>
 <body>
     <header>
@@ -18,29 +19,41 @@
         <h2>Foto's van de Bingo</h2>
         <h3>Bij Harriet</h3>
         <div class="photo-grid">
-            <img src="Foto001.jpg" alt="Foto bij Harriet">
-            <img src="Foto002.jpg" alt="Foto bij Harriet">
-            <img src="Foto003.jpg" alt="Foto bij Harriet">
-            <img src="Foto004.jpg" alt="Foto bij Harriet">
-            <img src="Foto005.jpg" alt="Foto bij Harriet">
-            <img src="Foto006.jpg" alt="Foto bij Harriet">
-            <img src="Foto007.jpg" alt="Foto bij Harriet">
-            <img src="Foto008.jpeg" alt="Foto bij Harriet">
+            <a href="Foto001.jpg" data-title="Actiepakket met lootjes" class="lightbox-trigger"><img src="Foto001.jpg" alt="Actiepakket met lootjes"></a>
+            <a href="Foto002.jpg" data-title="Usb Repareren bij Harriët en Robero. Helaas niet gelukt" class="lightbox-trigger"><img src="Foto002.jpg" alt="Usb Repareren bij Harriët en Robero. Helaas niet gelukt"></a>
+            <a href="Foto003.jpg" data-title="Klaar voor de bingo Lekker Casis er bij" class="lightbox-trigger"><img src="Foto003.jpg" alt="Klaar voor de bingo Lekker Casis er bij"></a>
+            <a href="Foto004.jpg" data-title="Spelen met lampje" class="lightbox-trigger"><img src="Foto004.jpg" alt="Spelen met lampje"></a>
+            <a href="Foto005.jpg" data-title="Lampje staat aan zodat ik alles goed zie als het donker is later op de avond" class="lightbox-trigger"><img src="Foto005.jpg" alt="Lampje staat aan zodat ik alles goed zie als het donker is later op de avond"></a>
+            <a href="Foto006.jpg" data-title="" class="lightbox-trigger"><img src="Foto006.jpg" alt=""></a>
+            <a href="Foto007.jpg" data-title="Lekker 32 graden in de kamer door de houtkachel" class="lightbox-trigger"><img src="Foto007.jpg" alt="Lekker 32 graden in de kamer door de houtkachel"></a>
+            <a href="Foto008.jpeg" data-title="Spelen op 4 boekjes. Ik had de pyjama ook al aan" class="lightbox-trigger"><img src="Foto008.jpeg" alt="Spelen op 4 boekjes. Ik had de pyjama ook al aan"></a>
         </div>
         <h3>Bij Alisa</h3>
         <div class="photo-grid">
-            <img src="Foto009.jpg" alt="Foto bij Alisa">
-            <img src="Foto010.jpg" alt="Foto bij Alisa">
-            <img src="Foto011.jpeg" alt="Foto bij Alisa">
+            <a href="Foto009.jpg" data-title="Bij Alisa Alles even klaarzetten" class="lightbox-trigger"><img src="Foto009.jpg" alt="Bij Alisa Alles even klaarzetten"></a>
+            <a href="Foto010.jpg" data-title="Ons bingo pakket We gingen met 6 man bingo bij Alisa. We hadden heel veel lol en plezier" class="lightbox-trigger"><img src="Foto010.jpg" alt="Ons bingo pakket We gingen met 6 man bingo bij Alisa. We hadden heel veel lol en plezier"></a>
+            <a href="Foto011.jpeg" data-title="Ik was geknipt op Woensdagmiddag door Alisa. Ze kan het al heel goed" class="lightbox-trigger"><img src="Foto011.jpeg" alt="Ik was geknipt op Woensdagmiddag door Alisa. Ze kan het al heel goed"></a>
         </div>
         <h3>Eigen Foto's</h3>
         <div class="photo-grid">
-            <img src="Foto011.jpeg" alt="Eigen Foto" class="blurry">
-            <img src="Foto012.jpg" alt="Eigen Foto" class="blurry">
+            <a href="Foto011.jpeg" data-title="Eigen Foto" class="lightbox-trigger"><img src="Foto011.jpeg" alt="Eigen Foto" class="blurry"></a>
+            <a href="Foto012.jpg" data-title="Eigen Foto" class="lightbox-trigger"><img src="Foto012.jpg" alt="Eigen Foto" class="blurry"></a>
+            <a href="Foto013.jpg" data-title="Ik ben Duitsland geweest voor Harriët en Roberto" class="lightbox-trigger"><img src="Foto013.jpg" alt="Ik ben Duitsland geweest voor Harriët en Roberto"></a>
         </div>
     </main>
     <footer>
         <p>&copy; 2024 Julian Wilbrink. Alle rechten voorbehouden.</p>
     </footer>
+
+    <!-- Lightbox -->
+    <div id="lightbox" class="lightbox">
+        <span class="close">&times;</span>
+        <span class="prev">&#10094;</span>
+        <span class="next">&#10095;</span>
+        <img class="lightbox-content" id="lightbox-img">
+        <div id="caption"></div>
+    </div>
+    
+    <script src="script.js"></script>
 </body>
 </html>
