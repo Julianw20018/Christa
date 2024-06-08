@@ -69,6 +69,7 @@ h2 {
     width: 50%; /* Breedte aanpassen om overeen te komen met de tekst */
     max-width: 500px; /* Maximale breedte instellen */
     height: auto;
+    margin-bottom: 10px; /* Ruimte toevoegen tussen afbeeldingen */
 }
 
 .rd-logo {
