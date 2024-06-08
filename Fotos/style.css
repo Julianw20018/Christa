@@ -1,0 +1,91 @@
+/* Basisstijl */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+    width: 100%;
+}
+
+header h1 {
+    margin: 0;
+}
+
+nav {
+    background-color: #666;
+    padding: 10px;
+}
+
+nav a {
+    color: #fff;
+    margin: 0 10px;
+    text-decoration: none;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+main {
+    flex: 1;
+    padding: 20px;
+}
+
+h2, h3 {
+    text-align: center;
+}
+
+.photo-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+
+.photo-grid img {
+    width: calc(25% - 20px); /* Vier foto's per rij, rekening houdend met de tussenruimte */
+    height: auto;
+    object-fit: cover;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+}
+
+.blurry {
+    filter: blur(2px);
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #333;
+    color: #fff;
+    width: 100%;
+}
+
+/* Responsieve stijl */
+@media (max-width: 1200px) {
+    .photo-grid img {
+        width: calc(33.33% - 20px); /* Drie foto's per rij */
+    }
+}
+
+@media (max-width: 768px) {
+    .photo-grid img {
+        width: calc(50% - 20px); /* Twee foto's per rij */
+    }
+}
+
+@media (max-width: 480px) {
+    .photo-grid img {
+        width: calc(100% - 20px); /* Eén foto per rij */
+    }
+}
