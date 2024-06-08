@@ -66,9 +66,9 @@ h2 {
 }
 
 .pen-image {
-    width: 100%; /* Maak beide afbeeldingen 100% breedte */
-    max-width: 500px; /* Maximale breedte instellen */
+    width: 300px; /* Set beide afbeeldingen op dezelfde breedte */
     height: auto;
+    max-width: 100%; /* Zorg ervoor dat de afbeeldingen responsief blijven */
     margin-bottom: 10px; /* Ruimte toevoegen tussen afbeeldingen */
 }
 
