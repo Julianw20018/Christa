@@ -91,4 +91,24 @@ footer {
         position: static;
         padding: 20px;
     }
+    /* Agenda stijl */
+.agenda {
+    background-color: #f9f9f9;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.agenda h2 {
+    margin: 0;
+    font-size: 1.5em;
+    color: #333;
+}
+
+.agenda p {
+    margin: 10px 0 0;
+    font-size: 1.2em;
+    color: #666;
 }
